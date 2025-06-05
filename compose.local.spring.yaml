@@ -1,0 +1,21 @@
+# Triggered automatically when running the application thanks to <artifactId>spring-boot-docker-compose</artifactId>
+
+services:
+  postgres:
+    container_name: modern_infra_postgres
+    image: 'postgres:15.7'
+    ports:
+      - '5433:5432'
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    env_file:
+      - path: ./local.env
+        required: true
+
+  zipkin:
+    image: 'openzipkin/zipkin:latest'
+    ports:
+      - '9411'
+
+volumes:
+  postgres_data:

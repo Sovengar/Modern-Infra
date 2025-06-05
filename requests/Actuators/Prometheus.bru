@@ -1,0 +1,11 @@
+meta {
+  name: Prometheus
+  type: http
+  seq: 3
+}
+
+get {
+  url: http://localhost:9090/api/actuator/prometheus
+  body: none
+  auth: none
+}

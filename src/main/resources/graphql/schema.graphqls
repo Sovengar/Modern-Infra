@@ -1,0 +1,35 @@
+type Query {
+    userById(id: String!): User
+    users: [User]
+}
+
+type Mutation {
+    registerUser(input: CreateUserRequest!): User
+}
+
+type User {
+    id: String!
+    realname: String
+    username: String!
+    email: String!
+    internalEnterpriseEmail: String
+    status: String!
+    phoneNumbers: String
+    role: Role
+}
+
+type Role {
+    code: String!
+    name: String!
+}
+
+input CreateUserRequest {
+    id: String!
+    realname: String
+    username: String!
+    email: String!
+    password: String!
+    phoneNumbers: [String]
+}
+
+

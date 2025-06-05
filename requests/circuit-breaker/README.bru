@@ -1,0 +1,24 @@
+meta {
+  name: README
+  type: http
+  seq: 3
+}
+
+head {
+  url: 
+  body: text
+  auth: none
+}
+
+body:text {
+  EXPLANATION:
+  Execute endpoint, payment has a chance to throw error, if it works you get the payment processed.
+  
+  In Circuit-Breaker status you can see the health of your circuit breaker, if is CLOSED means is inactive an the app is working properly.
+  If is HALF_OPEN means is active.
+  When an error occurs 3 times, the circuit breaker goes to HALF_OPEN.
+  When no errors occurs and you get 3 success requests, goes back to CLOSED.
+  
+  EXECUTION:
+  If the endpoint executes well, you can see the CB is CLOSED, execute multiple times until you see an error, then check the CB, it should be HALF_OPEN
+}
