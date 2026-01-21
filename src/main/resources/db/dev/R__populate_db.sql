@@ -1,2 +1,0 @@
-insert into MI.USERS (user_id, realname, username, email, internal_enterprise_email, password, country, status, phone_numbers, role_code, version, created_at, created_by) values
-('f5e4e2a8-7f07-4b2e-9b7c-6c6b1fcd3c42', 'John Doe', 'johndoe', 'V4u0A@example.com', 'emailInBadState@ggg.com', 'password', 'ES', 'ACTIVE', '+34123456789;+34123456790', 'ADM', 0, '2025-02-05 14:00:00', 'SYSTEM');
